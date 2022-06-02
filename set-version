@@ -9,7 +9,7 @@ then
   SED_ARG='-E'
 fi
 
-sed $SED_ARG "s/version = (.*)/version = \"$VERSION-1\"/;s/tag = (.*)/tag = \"v$VERSION\"/" rockspecs/elasticsearch-lua.rockspec >rockspecs/elasticsearch-lua-$VERSION-1.rockspec
+sed $SED_ARG "s/version = (.*)/version = \"$VERSION-1\"/;s/v([0-9\.]+)\.tar/v$VERSION\.tar/" rockspecs/elasticsearch-lua.rockspec >rockspecs/elasticsearch-lua-$VERSION-1.rockspec
 sed $SED_ARG "s/luarocks make (.*)/luarocks make rockspecs\/elasticsearch-lua-$VERSION-1.rockspec/" .github/workflows/test-all.yml >.github/workflows/test-all.yml.tmp
 
 if [ $? == 0 ]
