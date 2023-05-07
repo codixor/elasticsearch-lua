@@ -209,7 +209,7 @@ function Settings:setConnectionPoolSettings()
   else
     ConnectionPool = self.params.connectionPool
   end
-  o = {
+  local o = {
     connections = self.connections,
     selector = self.selector,
     logger = self.logger
