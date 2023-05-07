@@ -989,7 +989,7 @@ end
 -- Returns an instance of Client class
 -------------------------------------------------------------------------------
 function Client:new(o)
-  o = o or {}
+  local o = o or {}
   setmetatable(o, self)
   self.__index = self
   o.hosts = o.hosts or {{}}
