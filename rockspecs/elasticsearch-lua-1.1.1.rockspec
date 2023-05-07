@@ -1,8 +1,8 @@
 package = "elasticsearch-lua"
 version = "1.0.10-1"
 source = {
-  url = "git+https://github.com/PowerDNS/elasticsearch-lua",
-  tag = "v1.0.10"
+  url = "git+https://github.com/codixor/elasticsearch-lua/",
+  tag = "1.1.1"
 }
 description = {
   summary = "Elasticsearch client for the Lua language",
